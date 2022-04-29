@@ -6,5 +6,10 @@ describe("Tests para ExplorerService", () => {
         const explorersInNode = ExplorerService.filterByMission(explorers, "node");
         expect(explorersInNode.length).toBe(1);
     });
+    test("Requerimiento 2: Calcular todos los explorers que tengan un stack", () => {
+        const explorers = [{stacks: "javascript"}];
+        const explorersInNode = ExplorerService.getExplorersInStack(explorers, "javascript");
+        expect(explorersInNode.length).toBe(1);
+    });
 
 });
