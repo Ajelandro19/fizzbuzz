@@ -11,6 +11,6 @@ describe("Tests para ExplorerController",()=>{
     });
     test("Requerimiento 3: Obtener los explorers que tengan cierto stack",()=>{
         const explorersInNode=ExplorerController.getExplorersInStack("javascript");
-        expect(explorersInNode[0]).toBe("ajolonauta1");
+        expect(explorersInNode[0].githubUsername).toBe("ajolonauta1");
     });
 });
